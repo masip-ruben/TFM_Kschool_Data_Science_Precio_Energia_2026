@@ -1,0 +1,16 @@
+# Python==3.13.9
+
+prophet==1.2.1
+scikit-learn==1.7.2
+contextily==1.6.2
+geopandas==1.1.1
+matplotlib==3.10.7
+numpy==2.3.4
+pandas==2.3.3
+requests==2.32.5
+joblib==1.5.3
+shapely==7.3.2
+tqdm==4.67.1
+importlib-metadata==8.7.1
+scipy==1.16.3
+shap==0.50.0
