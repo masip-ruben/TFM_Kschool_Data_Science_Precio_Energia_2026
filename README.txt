@@ -22,4 +22,4 @@ Contexto académico:
 Este proyecto se ha desarrollado como Trabajo Fin de Máster (TFM) en el Máster en Data Science, con fines exclusivamente académicos.
 
 Reproducibilidad:
-Los experimentos y modelos pueden reproducirse utilizando los ficheros de dependencias incluidos en el repositorio.
+Los experimentos y modelos pueden reproducirse a partir de los ficheros de dependencias incluidos en el repositorio.
