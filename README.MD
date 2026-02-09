@@ -55,10 +55,11 @@ Los resultados obtenidos muestran que el modelo basado en **HistGradientBoosting
 clara el rendimiento frente a un baseline determinista, capturando con mayor precisión la dinámica
 del mercado eléctrico.
 
-La validación se ha realizado mediante esquemas temporales, evaluando el desempeño con métricas
-como RMSE y WAPE, lo que garantiza una evaluación realista del comportamiento del modelo en
-escenarios fuera de muestra y refuerza su idoneidad para su uso en contextos de análisis financiero
-y toma de decisiones.
+La validación del modelo se ha realizado mediante esquemas de partición temporal, respetando la
+estructura cronológica de la serie. El desempeño se ha evaluado utilizando el RMSE como métrica
+principal, por su interpretación directa en €/MWh, y el WAPE como métrica complementaria, con el
+objetivo de analizar el error relativo agregado y verificar la robustez del modelo en distintos
+regímenes de precios.
 
 ---
 
