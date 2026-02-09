@@ -11,88 +11,62 @@
 **Fecha:** Febrero 2026
 
 ---
+## Motivación
+La predicción del precio de la electricidad es un elemento clave en la evaluación financiera de
+proyectos de energías renovables. Promotores, fondos de inversión y entidades financieras deben
+estimar ingresos futuros en un contexto de elevada incertidumbre, donde el precio eléctrico está
+condicionado por múltiples factores como la demanda, el mix de generación, el clima o el precio
+de los combustibles fósiles.
 
-## Descripción del proyecto
-Este repositorio contiene el código y los datos asociados al Trabajo Fin de Máster (TFM) titulado  
-**“Modelo Predictivo del Precio de la Electricidad en el Mercado Diario del MIBEL”**.
-
-El objetivo principal del proyecto es desarrollar un **modelo predictivo del precio diario de la electricidad**
-en el mercado mayorista ibérico (MIBEL), orientado a su **integración en modelos financieros de proyectos
-de energías renovables**, apoyando la toma de decisiones estratégicas y de inversión en un entorno de
-alta incertidumbre.
-
----
-
-## Contexto y caso de uso
-El trabajo se enmarca en el caso de uso de una **consultora especializada en análisis energético** que
-requiere estimaciones robustas del precio de la electricidad para su incorporación en modelos de
-*project finance*. Frente a enfoques deterministas o escenarios únicos, se propone un marco analítico
-basado en **Machine Learning y series temporales** capaz de capturar la complejidad del mercado eléctrico.
+Sin embargo, muchos modelos financieros continúan utilizando proyecciones deterministas o
+escenarios simplificados, lo que limita su capacidad para capturar la variabilidad real del mercado.
+Este proyecto surge con el objetivo de aportar un enfoque analítico más robusto y realista.
 
 ---
 
-## Alcance del modelo
-El modelo estima el **precio medio diario de la electricidad** bajo un escenario esperado (P50),
-utilizando como variables explicativas:
+## Descripción del Proyecto
+Este proyecto desarrolla un modelo predictivo del precio diario de la electricidad en el mercado
+mayorista ibérico (MIBEL), utilizando técnicas de Machine Learning y modelos de series temporales.
 
-- Demanda eléctrica nacional  
-- Generación eólica y solar  
-- Potencia instalada eólica y solar  
-- Variables meteorológicas agregadas a nivel nacional (temperatura, viento y radiación)  
-- Precio del gas natural  
-- Índice de Precios al Consumo (IPC)  
-- Variables de calendario y festividades  
+Tras evaluar distintos enfoques de modelización y algoritmos, el modelo seleccionado para la
+predicción del precio de la electricidad ha sido **HistGradientBoosting**, al ofrecer el mejor
+equilibrio entre precisión, estabilidad y capacidad de generalización.
 
-Para la generación de variables exógenas futuras se han desarrollado **modelos auxiliares independientes**,
-permitiendo simular escenarios coherentes a medio y largo plazo.
+El modelo principal de precios se apoya, además, en un conjunto de modelos auxiliares destinados a
+la generación de variables exógenas futuras, como la generación renovable, la potencia instalada,
+la demanda o variables climáticas agregadas a nivel nacional. Este enfoque permite construir
+escenarios futuros coherentes y consistentes desde el punto de vista energético.
 
 ---
 
-## Metodología
-La arquitectura del proyecto separa claramente:
+## Potenciales Beneficios para la Empresa
+La solución desarrollada permite a empresas del sector energético y financiero:
 
-- **Fase de entrenamiento**:  
-  Ingestión de datos históricos, preprocesado, generación de variables y entrenamiento de modelos.
-- **Fase de simulación operativa**:  
-  Uso de modelos ya entrenados para la generación de escenarios futuros.
-
-La validación se realiza mediante **esquemas temporales** y el rendimiento se evalúa frente a un
-**baseline determinista**, utilizando métricas como **RMSE** y **WAPE**.
-
-El **modelo principal de precios** se apoya en algoritmos de *Machine Learning*, integrando como entrada
-las predicciones generadas por los modelos auxiliares.
+- Mejorar la estimación de ingresos futuros de proyectos renovables.
+- Reducir la dependencia de escenarios únicos o supuestos deterministas.
+- Integrar predicciones de precios en modelos financieros para el cálculo de indicadores como
+  ingresos esperados, VAN o TIR.
+- Apoyar la toma de decisiones estratégicas y de inversión en un entorno de mercado volátil.
 
 ---
 
-## Estructura del repositorio
+## Resultados
+Los resultados obtenidos muestran que el modelo basado en **HistGradientBoosting** mejora de forma
+clara el rendimiento frente a un baseline determinista, capturando con mayor precisión la dinámica
+del mercado eléctrico.
 
-- **01.Datos/**  
-  Contiene los conjuntos de datos utilizados en el proyecto, obtenidos a partir de fuentes públicas
-  del sector energético y climático.
-
-- **02.Modelos/**  
-  Incluye los notebooks y scripts desarrollados para el análisis de datos, la generación de variables
-  y la construcción de los modelos predictivos.
-
-- **requirements.txt**  
-  Fichero con las dependencias necesarias para reproducir el proyecto en un entorno Python.
-
-- **requirements-windows.txt**  
-  Fichero con dependencias específicas para la ejecución del proyecto en entornos Windows.
-
-- **README.md**  
-  Documento descriptivo del repositorio y del alcance del proyecto.
-
+La validación se ha realizado mediante esquemas temporales, evaluando el desempeño con métricas
+como RMSE y WAPE, lo que garantiza una evaluación realista del comportamiento del modelo en
+escenarios fuera de muestra y refuerza su idoneidad para su uso en contextos de análisis financiero
+y toma de decisiones.
 
 ---
 
-## Reproducibilidad
-Los experimentos y modelos incluidos en este repositorio pueden reproducirse **a partir de los ficheros
-de dependencias**, utilizando un entorno Python compatible.
+## Replicación del Proyecto
+El proyecto ha sido diseñado con un enfoque reproducible. Todos los experimentos pueden
+replicarse utilizando los datos y el código incluidos en el repositorio, junto con los ficheros de
+dependencias proporcionados.
 
----
-
-## Contexto académico
-Este proyecto se ha desarrollado **exclusivamente con fines académicos** como Trabajo Fin de Máster
-en el Máster en Data Science.  
-Todos los datos empleados proceden de **fuentes públicas oficiales** del sector energético y climático.
+La arquitectura separa la fase de entrenamiento de la fase de simulación operativa, permitiendo
+la reutilización de modelos entrenados y la ejecución de nuevas simulaciones bajo distintos
+horizontes temporales.
