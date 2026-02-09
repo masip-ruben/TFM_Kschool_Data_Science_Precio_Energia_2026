@@ -67,13 +67,20 @@ las predicciones generadas por los modelos auxiliares.
 ## Estructura del repositorio
 
 ├── 01.Datos
+
 │   └── Datos de entrada y datos procesados (fuentes públicas)
 ├── 02.Modelos
+
 │   └── Notebooks y scripts de modelización y análisis
+
 ├── requirements.txt
+
 │   └── Dependencias del entorno Python
+
 ├── requirements-windows.txt
+
 │   └── Dependencias específicas para entorno Windows
+
 └── README.md
 
 ---
