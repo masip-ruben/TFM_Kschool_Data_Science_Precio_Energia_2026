@@ -1,15 +1,5 @@
 # TFM – Modelo Predictivo del Precio de la Electricidad en el Mercado Diario del MIBEL
 
-## Autores
-- **Alejandro Villa Estada**
-- **Elena García Ramírez**
-- **Javier Ijalba Martínez**
-- **Rubén Darío Masip Sánchez**
-
-**Tutor:** Antonio Pita Lozano  
-**Máster:** Máster en Data Science  
-**Fecha:** Febrero 2026
-
 ---
 ## Motivación
 La predicción del precio de la electricidad es un elemento clave en la evaluación financiera de
