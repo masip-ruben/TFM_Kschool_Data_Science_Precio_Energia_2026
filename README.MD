@@ -66,11 +66,11 @@ las predicciones generadas por los modelos auxiliares.
 
 ## Estructura del repositorio
 
-01.Datos/
+```01.Datos/
 02.Modelos/
 requirement.txt
 requirement-windows.txt
-README.MD
+README.MD```
 
 - **01.Datos/**  
   Contiene los conjuntos de datos utilizados en el proyecto, obtenidos a partir de fuentes públicas
