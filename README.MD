@@ -68,9 +68,9 @@ las predicciones generadas por los modelos auxiliares.
 
 01.Datos/
 02.Modelos/
-requirements.txt
-requirements-windows.txt
-README.md
+requirement.txt
+requirement-windows.txt
+README.MD
 
 - **01.Datos/**  
   Contiene los conjuntos de datos utilizados en el proyecto, obtenidos a partir de fuentes públicas
