@@ -66,22 +66,29 @@ las predicciones generadas por los modelos auxiliares.
 
 ## Estructura del repositorio
 
-├── 01.Datos
+01.Datos/
+02.Modelos/
+requirements.txt
+requirements-windows.txt
+README.md
 
-│   └── Datos de entrada y datos procesados (fuentes públicas)
-├── 02.Modelos
+- **01.Datos/**  
+  Contiene los conjuntos de datos utilizados en el proyecto, obtenidos a partir de fuentes públicas
+  del sector energético y climático.
 
-│   └── Notebooks y scripts de modelización y análisis
+- **02.Modelos/**  
+  Incluye los notebooks y scripts desarrollados para el análisis de datos, la generación de variables
+  y la construcción de los modelos predictivos.
 
-├── requirements.txt
+- **requirements.txt**  
+  Fichero con las dependencias necesarias para reproducir el proyecto en un entorno Python.
 
-│   └── Dependencias del entorno Python
+- **requirements-windows.txt**  
+  Fichero con dependencias específicas para la ejecución del proyecto en entornos Windows.
 
-├── requirements-windows.txt
+- **README.md**  
+  Documento descriptivo del repositorio y del alcance del proyecto.
 
-│   └── Dependencias específicas para entorno Windows
-
-└── README.md
 
 ---
 
